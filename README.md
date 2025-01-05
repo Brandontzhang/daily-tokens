@@ -77,7 +77,7 @@ Outlining how the user creates buckets, defines token types, adds tokens and vie
       D --> H
       H --> I
       E --> I
-      I --> K & L --> J
+      I --> K & L --> J --> A
   ```
 ## Data Flow diagrams 
   - How the data moves between the frontend, backend, and database 
