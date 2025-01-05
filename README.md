@@ -15,46 +15,48 @@ Create a web app that allows tracking of progress on daily goals
 - Auth0 Integration for user management 
 
 # System Design 
-## Mermaid
-1. User Flow diagrams
+## User Flow diagrams
+Rectangles -> actions
+Circles -> states
+Decisions -> Diamonds
+### User Login Flow
+Outlining the user login flow, with third party authorization included
   ```mermaid
-  ---
-  title: User Login Flow
-  --- 
   flowchart LR
       A(Landing Page)
-      B("Login Action
+      A2{Login or Create Account?}
+      B["Login
       - Third Party
-      - Existing Account")
+      - Existing Account"]
       C(Home Page)
-      D(Log out)
-      E(Create new account with email)
+      D[Log out]
+      E[Create new account with email]
       F(Confirmation page)
-      A --> B
+      A --> A2
+      A2 --> B
       B --> C
       C --> D
-      A --> E
+      A2 --> E
       E --> F
       F --> C
       D --> A
    ```
+### Token Management Flow
+Outlining how the user creates buckets, defines token types, adds tokens and view their progress in their activities
   ```mermaid
-  ---
-  title: Token Management Flow
-  ---
   flowchart LR
       A(Home Page)
-      B(View Summary)
-      C(Add Tokens)
-      D(Bucket Details)
-      E(Add Bucket)
+      B[View Summary]
+      C[Add Tokens]
+      D[View Bucket Details]
+      E[Add Bucket]
       F("Summary of all buckets
           - By Label
           - By hours")
       G(Modal for token breakdown + details)
       H(Weekly, Monthly, Overall progress)
       I(Bucket Settings)
-      J(Save)
+      J{Save/Cancel}
       K("Bucket
           - Description
           - Labels
@@ -77,7 +79,7 @@ Create a web app that allows tracking of progress on daily goals
       E --> I
       I --> K & L --> J
   ```
-2. Data Flow diagrams 
+## Data Flow diagrams 
   - How the data moves between the frontend, backend, and database 
   - User log in/ log out  [!IMPORTANT] (data flow)
 3. State diagrams
