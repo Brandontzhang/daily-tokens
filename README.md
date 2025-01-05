@@ -23,15 +23,15 @@ Decisions -> Diamonds
 Outlining the user login flow, with third party authorization included
   ```mermaid
   flowchart LR
-      A(Landing Page)
+      A([Landing Page])
       A2{Login or Create Account?}
       B["Login
       - Third Party
       - Existing Account"]
-      C(Home Page)
+      C([Home Page])
       D[Log out]
       E[Create new account with email]
-      F(Confirmation page)
+      F([Confirmation page])
       A --> A2
       A2 --> B
       B --> C
@@ -45,29 +45,29 @@ Outlining the user login flow, with third party authorization included
 Outlining how the user creates buckets, defines token types, adds tokens and view their progress in their activities
   ```mermaid
   flowchart LR
-      A(Home Page)
+      A([Home Page])
       B[View Summary]
       C[Add Tokens]
       D[View Bucket Details]
       E[Add Bucket]
-      F("Summary of all buckets
+      F(["Summary of all buckets
           - By Label
-          - By hours")
-      G(Modal for token breakdown + details)
-      H(Weekly, Monthly, Overall progress)
-      I(Bucket Settings)
+          - By hours"])
+      G([Modal for token breakdown + details])
+      H([Weekly, Monthly, Overall progress])
+      I([Bucket Settings])
       J{Save/Cancel}
-      K("Bucket
+      K(["Bucket
           - Description
           - Labels
           - Color/Background
-          - Week/Month toggle")
-      L("Token
+          - Week/Month toggle"])
+      L(["Token
           - Color/Background
           - Shape
           - Type (Session/time)
           - Session type details
-          - Allowed breakdowns by %")
+          - Allowed breakdowns by %"])
       A --> B
       A --> C
       A --> D
