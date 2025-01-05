@@ -60,7 +60,6 @@ Create a web app that allows tracking of progress on daily goals
             - Labels
             - Color/Background
             - Week/Month toggle
-
         Token
             - Color/Background
             - Shape
