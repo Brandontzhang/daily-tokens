@@ -4,7 +4,6 @@
 Create a web app that allows tracking of progress on daily goals 
 
 # Learning Goals
-## Design
 ### System Design
 - Use Mermaid to create system design docs 
 ### UI Design
@@ -130,9 +129,9 @@ Outlines where information regarding buckets and tokens are stored and transmitt
   - moving between different screens
   - different user settings?
   1. Initial state of the app. How is the redux store structured? Basic actions and reducers (how the state changes in response to actions).
-4. Component Interaction Diagrams 
+## Component Interaction Diagrams 
   - How components interact with the data (related to data flow diagrams? Maybe a bit more detailed for each component)
-5. Entity-Relationship Diagrams
+## Entity-Relationship Diagrams
   - Database design documents (types and tables)
 
 # UI Design
