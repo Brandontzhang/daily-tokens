@@ -23,11 +23,9 @@ Create a web app that allows tracking of progress on daily goals
   --- 
   flowchart LR
       A(Landing Page)
-      B[":::markdown
-      **Login Action**
+      B("Login Action
       - Third Party
-      - Existing Account
-      :::"]
+      - Existing Account")
       C(Home Page)
       D(Log out)
       E(Create new account with email)
