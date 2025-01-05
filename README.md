@@ -40,7 +40,7 @@ Create a web app that allows tracking of progress on daily goals
    ```
   ```mermaid
   ---
-  Title: Token Tracking Flow
+  title: Token Management Flow
   ---
   flowchart LR
       A(Home Page)
@@ -49,34 +49,33 @@ Create a web app that allows tracking of progress on daily goals
       D(Bucket Details)
       E(Add Bucket)
       F("Summary of all buckets
-        - By Label
-        - By hours")
+          - By Label
+          - By hours")
       G(Modal for token breakdown + details)
       H(Weekly, Monthly, Overall progress)
       I(Bucket Settings)
       J(Save)
       K("Bucket
-            - Description
-            - Labels
-            - Color/Background
-            - Week/Month toggle
-        Token
-            - Color/Background
-            - Shape
-            - Type (Session/time)
-                - Session type details
-            - Allowed breakdowns by %")
-        A --> B
-        A --> C
-        A --> D
-        A --> E
-        B --> F
-        C --> G
-        D --> H
-        H --> I
-        E --> I
-        I --> K
-        K --> J
+          - Description
+          - Labels
+          - Color/Background
+          - Week/Month toggle")
+      L("Token
+          - Color/Background
+          - Shape
+          - Type (Session/time)
+          - Session type details
+          - Allowed breakdowns by %")
+      A --> B
+      A --> C
+      A --> D
+      A --> E
+      B --> F
+      C --> G
+      D --> H
+      H --> I
+      E --> I
+      I --> K & L --> J
   ```
 2. Data Flow diagrams 
   - How the data moves between the frontend, backend, and database 
