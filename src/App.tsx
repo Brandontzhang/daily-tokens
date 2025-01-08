@@ -1,8 +1,11 @@
+import Cube from './animations/Cube'
 import './App.css'
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Cube />
+    </div>
   )
 }
 
