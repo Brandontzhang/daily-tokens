@@ -121,14 +121,7 @@ Outlines where information regarding buckets and tokens are stored and transmitt
       G --> A
 ```
 ## State diagrams
-  - How the application changes based on the user's actions. 
-    - The state of the app, the user flow diagrams were a more general user flow, this is more the internal state of the app
-    - State of the app (redux store)
-    - Side effects (database calls/actions)
-  - log in/log out -> how it affects the app
-  - moving between different screens
-  - different user settings?
-  1. Initial state of the app. How is the redux store structured? Basic actions and reducers (how the state changes in response to actions).
+  - How the application state changes based on the user's actions. 
 ### User Session 
 ```mermaid
 stateDiagram-v2
