@@ -1,10 +1,9 @@
-import Cube from './animations/Cube'
-import './App.css'
+import RotatingCube from './animations/RotatingCube'
 
 function App() {
   return (
-    <div>
-      <Cube />
+    <div className='h-52 w-52 bg-green-500'>
+      <RotatingCube />
     </div>
   )
 }
