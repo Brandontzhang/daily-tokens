@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@reduxjs/toolkit": "^2.5.0",
+    "@types/auth0": "^3.3.10",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.20",
     "cannon-es": "^0.20.0",
