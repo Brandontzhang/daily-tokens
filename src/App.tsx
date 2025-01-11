@@ -1,9 +1,9 @@
-import RotatingCube from './animations/RotatingCube'
+import Animations from './animations/AnimationsPage'
 
 function App() {
   return (
-    <div className='h-52 w-52 bg-green-500'>
-      <RotatingCube />
+    <div className='h-full w-full'>
+      <Animations />
     </div>
   )
 }

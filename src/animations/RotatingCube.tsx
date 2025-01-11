@@ -23,7 +23,7 @@ const RotatingCube = () => {
 
     // Create cube
     const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -52,9 +52,10 @@ const RotatingCube = () => {
   }, []);
 
   return (
-    <div className='h-full w-full bg-yellow-50' ref={containerRef}>
-      hello?
-    </div>
+    <div
+      className='h-full w-full'
+      ref={containerRef}
+    />
   )
 };
 
