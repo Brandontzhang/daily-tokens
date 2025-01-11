@@ -237,11 +237,12 @@ erDiagram
         string name
         text description
         timestamp createdAt
-        string tokenType
-        int completedTokens
-        double incompleteToken
+        string tokenType - denotes how much each token is worth (1 hours, 1 session, etc.)
+        int completedTokens - number of completed tokens
+        double incompleteToken - the last semi-completed token. Only 1 at a time
     }
     
     User ||--o{ Buckets : owns
     User ||--o{ UserSettings : has
 ```
+### Bucket-Token Design
