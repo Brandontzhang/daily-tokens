@@ -238,17 +238,10 @@ erDiagram
         text description
         timestamp createdAt
         string tokenType
-        tokens int
+        int completedTokens
+        double incompleteToken
     }
     
-    Token {
-        int id PK
-        int bucket_id FK
-        int percentage
-        timestamp createdAt
-    }
-
     User ||--o{ Buckets : owns
     User ||--o{ UserSettings : has
-    Buckets ||--|| TokenSettings : contains
 ```

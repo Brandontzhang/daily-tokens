@@ -3,12 +3,7 @@ export type Bucket = {
   name: string,
   description: string,
   createdAt: Date,
-  tokens: Token[],
+  completedTokens: number,
+  incompleteToken: number,
   tokenType: string,
 };
-
-export type Token = {
-  bucket_id: number,
-  percentage: number
-}
-
