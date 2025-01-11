@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/nav/Navbar"
 import UserProfilePage from "./components/user/UserProfilePage"
 import BucketDetailsPage from "./components/buckets/BucketDetailsPage"
 import HomePage from "./components/main/HomePage"

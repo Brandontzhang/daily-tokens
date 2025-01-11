@@ -1,13 +1,20 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import { Ref } from "react";
 
-const UserIcon = () => {
+interface UserIconProps {
+  classname?: string
+  floatRef?: Ref<HTMLDivElement>
+  [key: string]: any;
+}
+
+const UserIcon: React.FC<UserIconProps> = ({ classname, floatRef, ...props }) => {
   const { user, isAuthenticated } = useAuth0();
 
   if (!user || !isAuthenticated) return;
 
   return (
-    <div className="h-12 w-12">
-      <img className="rounded-full" src={user.picture} alt={user.name} />
+    <div ref={floatRef} className={classname} {...props}>
+      <img className="rounded-full" src={user?.picture} alt={user.name} loading="lazy" />
     </div>
   )
 };
