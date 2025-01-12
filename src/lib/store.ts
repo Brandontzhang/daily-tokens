@@ -7,7 +7,7 @@ export const makeStore = () => {
     reducer: {
       user: userReducer,
       buckets: bucketsReducer,
-    }
+    },
   });
 }
 

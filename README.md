@@ -160,32 +160,13 @@ stateDiagram-v2
 stateDiagram-v2
     direction LR
 
-    Idle --> Fetching: FetchRequest
-    Fetching --> LoadingTokens: FetchTokensRequest
-    Fetching --> LoadingBuckets: FetchBucketsRequest
+    Idle --> LoadingBuckets: FetchBucketsRequest
 
-    LoadingTokens --> TokensLoaded: FetchTokensSuccess
+    LoadingBuckets --> Error_Display: FetchBucketsFailure
     LoadingBuckets --> BucketsLoaded: FetchBucketsSuccess
 
-    TokensLoaded --> BucketsLoaded: TokensReady
-    BucketsLoaded --> UpdatingBuckets: UpdateBucketRequest
-    UpdatingBuckets --> BucketsLoaded: UpdateBucketsSuccess
-
-    BucketsLoaded --> UpdatingTokens: UpdateTokensRequest
-    UpdatingTokens --> BucketsLoaded: UpdateTokensSuccess
-
-    BucketsLoaded --> AddingTokens: AddTokensRequest
-    AddingTokens --> BucketsLoaded: AddTokensSuccess
-
-    UpdatingTokens --> Error: UpdateTokensFailure
-    AddingTokens --> Error: AddTokensFailure
-    UpdatingBuckets --> Error: UpdateBucketsFailure
-    LoadingBuckets --> Error: FetchBucketsFailure
-    LoadingTokens --> Error: FetchTokensFailure
-
-    Error --> Retry: RetryAction
-    Retry --> Fetching
-
+    BucketsLoaded --> Idle: AddTokens
+    BucketsLoaded --> Idle: UpdateBucket
 ```
 ## Component Interaction Diagrams 
 Maps how components interact with each other and update the state in Redux
